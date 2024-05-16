@@ -6,9 +6,9 @@ const assertEqual = function(actual, expected) {
   //If coded correctly the messages will be the required ones as per the
   //assignment
   if (actual === expected) {
-    console.log("✅✅✅ Assertion Passed: ",actual, " === " ,expected);
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else
-    console.log("❌❌❌ Assertion Failed: ", actual, " !=== ",expected);
+    console.log(`❌❌❌ Assertion Failed: ${actual} !=== ${expected}`);
   
 };
 
