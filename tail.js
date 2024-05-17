@@ -18,17 +18,17 @@ const tail = function(arr) {
   /* Take the array, loop the elements and add them to the new result array,
   prints resulting array, then returns it*/
 
-  const tailArr = [];
+  /* const tailArr = [];
 
   for (let  i = 1; i < arr.length; i++) {
     
     tailArr[i - 1] = arr[i];
     
-  }
+  }*/
   
-  console.log(tailArr);
+  console.log(arr.slice(1));
 
-  return tailArr;
+  return arr.slice(1);
 };
 
 // TEST CASES
