@@ -38,7 +38,7 @@ const without = function (source, itemsToRemove) {
 
   let newArr = [];
 
-  let flag = false;
+  let isMatchFound = false; //Boolean variable that 'flags' a match
 
   for (let sourceElement of source) {
     // Iterates source array
@@ -47,14 +47,14 @@ const without = function (source, itemsToRemove) {
       // Iterates iTR array, while sourceElement is 'static'
 
       if (removeElement === sourceElement) {
-        flag = true;
+        isMatchFound = true;
       } // If an element from iTR matches an element from source, the source element gets 'flagged'
     }
-    if (!flag) {
+    if (!isMatchFound) {
       // If the flag never went up during an iteration of the iTR array then the sourceElement goes into the new array
       newArr.push(sourceElement);
     }
-    flag = false; // Flag gets reset
+    isMatchFound = false; // 'Flag' gets reset for the next element in source array
   }
   return newArr;
 };
