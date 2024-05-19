@@ -21,12 +21,10 @@ const eqArrays = function(arr1, arr2) {
 
   // Do this by iterating the arrays, and compare the elements simultaneously
 
-  let arrLength;
-  
   if (arr1.length === arr2.length) {
-    arrLength = arr1.length;
+    
     // Proceeds to compare elements
-    for (let i = 0; i < arrLength; i++) {
+    for (let i = 0; i < arr1.length; i++) {
 
       if (arr1[i] !== arr2[i]) {
         return false;
