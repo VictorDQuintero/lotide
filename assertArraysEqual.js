@@ -11,7 +11,7 @@ const eqArrays = function(arr1, arr2) {
     return false;
   }
     
-  // Proceeds to compare elements
+  // Proceeds to compare corresponding elements
     
   for (let i = 0; i < arr1.length; i++) {
   
