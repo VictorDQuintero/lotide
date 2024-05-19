@@ -51,12 +51,8 @@ const middle = function (arr) {
 
   if (arr.length % 2 !== 0) {
     newArr.push(arr[(arr.length - 1) / 2]);
-  }
-
-  //Test if array has even number elements, if so return new array with the middle two elements
-  if (arr.length % 2 === 0) {
-    /* newArr.push(arr[(arr.length - 1) / 2 - 0.5]);//Determines the index of the leftmost middle element
-    newArr.push(arr[(arr.length - 1) / 2 + 0.5]); */ //Determines the index of the rightmost middle element
+  } else {
+    //Test if array has even number elements, if so return new array with the middle two elements
     newArr.push(arr[arr.length / 2 - 1]); //Determines the index of the leftmost middle element
     newArr.push(arr[arr.length / 2]); //Determines the index of the rightmost middle element
   }
