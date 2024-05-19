@@ -1,23 +1,44 @@
 // FUNCTION IMPLEMENTATION
+const eqArrays = function(arr1, arr2) {
+  /* Function takes in two arays and returns true or false, based on a perfect match */
+  
+  // Function must compare various things: length of the arrays, then the element inside the arrays
+  //If those things are strictly equal, then it returns True, if not function returns false
+  
+  // Do this by iterating the arrays, and compare the elements simultaneously
+  
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+    
+  // Proceeds to compare elements
+    
+  for (let i = 0; i < arr1.length; i++) {
+  
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  
+  } return true;
+              
+     
+};
+
 const assertArraysEqual = function(arr1, arr2) {
   /* Function takes in two arays and prints wether they are equal or not */
   
-    if (arr1.length !== arr2.length) {
-      return console.log("❌❌❌ Assertion Failed: The arrays are NOT equal");
-    }
+  if (eqArrays(arr1, arr2)) {
+    console.log(`✅✅✅ Assertion Passed: [${arr1}] === [${arr2}]`);
+  } else {
+    console.log(`❌❌❌ Assertion Failed: [${arr1}] !== [${arr2}]`);
+  }
     
-    // Proceeds to compare elements
-    
-    for (let i = 0; i < arr1.length; i++) {
+};
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // => should PASS
+assertArraysEqual(["A", "B", "C"], ["A", "B", "C"]); // => should PASS
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => should PASS
+assertArraysEqual([1, 2, 3, 4], [1, 2, 3]); // => should PASS
   
-      if (arr1[i] !== arr2[i]) {
-          return console.log("❌❌❌ Assertion Failed: The arrays are NOT equal");
-        }
-  
-    } return console.log("✅✅✅ Assertion Passed: The arrays ARE equal");
-              
-  };
-
-
-
  
