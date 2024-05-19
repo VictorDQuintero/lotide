@@ -1,6 +1,5 @@
 //  FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-
+const assertEqual = function (actual, expected) {
   // Will take the two parameters and compare them with the strict equality operator
   //If they are strictly equal it will print Equal or Not Equal, as a test
   //If coded correctly the messages will be the required ones as per the
@@ -10,11 +9,10 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
   }
-  
 };
 
-const eqArrays = function(arr1, arr2) {
-/* Function takes in two arays and returns true or false, based on a perfect match */
+const eqArrays = function (arr1, arr2) {
+  /* Function takes in two arrays and returns true or false, based on a perfect match */
 
   // Function must compare various things: length of the arrays, then the element inside the arrays
   //If those things are strictly equal, then it returns True, if not function returns false
@@ -24,21 +22,16 @@ const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
-  
+
   // Proceeds to compare elements
-  
+
   for (let i = 0; i < arr1.length; i++) {
-
     if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-
-  } return true;
-            
-  
-  
+      return false;
+    }
+  }
+  return true;
 };
-
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => should PASS
