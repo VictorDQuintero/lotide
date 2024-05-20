@@ -19,7 +19,7 @@ const countOnly = function (allItems, itemsToCount) {
 
   for (const item of allItems) {
     if (itemsToCount[item]) {
-      // Checks if the name in allTimes is also contained in itemsToCount and has a boolean value of true
+      // Checks if the an item in allItems is also contained in itemsToCount and has a boolean value of true
       if (results[item]) {
         results[item] += 1;
       } else {
