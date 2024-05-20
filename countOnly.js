@@ -21,8 +21,11 @@ const countOnly = function (allItems, itemsToCount) {
     if (itemsToCount[item]) {
       // Checks if the an item in allItems is also contained in itemsToCount and has a boolean value of true
       if (results[item]) {
+        // Checks if the item already exists as a key in results
+        // If it does it increases its value by 1
         results[item] += 1;
       } else {
+        // If it doesn't already exist it initializes it to 1
         results[item] = 1;
       }
     }
