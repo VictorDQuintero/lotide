@@ -26,7 +26,7 @@ const countLetters = function (sentence) {
   for (const letter of sentence) {
     if (letter === " ") {
       continue;
-      // if there is a space in the string function won't count it
+      // if there is a space in the string the function won't count it
     } else if (letterCount[letter]) {
       letterCount[letter]++; // if there is an instance of the letter in result, increment its value by 1
     } else {
@@ -42,12 +42,12 @@ const sentence1 = "LHL is cool";
 const result1 = countLetters(sentence1);
 
 assertEqual(result1["L"], 2); // should PASS
-assertEqual(result1["H"], 1); // should PASS
-assertEqual(result1["i"], 1); // should PASS
-assertEqual(result1["s"], 1); // should PASS
-assertEqual(result1["c"], 1); // should PASS
-assertEqual(result1["o"], 2); // should PASS
-assertEqual(result1["l"], 1); // should PASS
+assertEqual(result1["H"], 1);
+assertEqual(result1["i"], 1);
+assertEqual(result1["s"], 1);
+assertEqual(result1["c"], 1);
+assertEqual(result1["o"], 2);
+assertEqual(result1["l"], 1);
 
 console.log("----------");
 
@@ -61,14 +61,14 @@ const sentence3 = "We R Number 1";
 const result3 = countLetters(sentence3);
 
 assertEqual(result3["W"], 1); // should PASS
-assertEqual(result3["e"], 2); // should PASS
-assertEqual(result3["R"], 1); // should PASS
-assertEqual(result3["N"], 1); // should PASS
-assertEqual(result3["u"], 1); // should PASS
-assertEqual(result3["m"], 1); // should PASS
-assertEqual(result3["b"], 1); // should PASS
-assertEqual(result3["r"], 1); // should PASS
-assertEqual(result3["1"], 1); // should PASS
+assertEqual(result3["e"], 2);
+assertEqual(result3["R"], 1);
+assertEqual(result3["N"], 1);
+assertEqual(result3["u"], 1);
+assertEqual(result3["m"], 1);
+assertEqual(result3["b"], 1);
+assertEqual(result3["r"], 1);
+assertEqual(result3["1"], 1);
 console.log("----------");
 
 const sentence4 = 1;

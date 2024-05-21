@@ -32,6 +32,44 @@ const assertArraysEqual = function (arr1, arr2) {
 
 const letterPositions = function (sentence) {
   const results = {};
+  let positionArray = [];
   // logic to update results here
+
+  if (typeof sentence !== "string") {
+    throw new Error("Parameter is not a string");
+  }
+
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] === " ") {
+      continue;
+
+      // if there is a space in the string, the function won't count it
+    } else if (results[sentence[i]]) {
+      // if there is an instance of the letter already in the object
+      for (const element of results[sentence[i]]) {
+        positionArray.push(element); // pushes each individual positioning already in the key-value pair into a new array
+      }
+      positionArray.push(i); // pushes the last position into the array
+      results[sentence[i]] = []; // clears the value with the old position array
+      results[sentence[i]] = positionArray; // assigns new position array into object
+      positionArray = []; // clears position array
+    } else {
+      // if there is no instance of the letter in the object, it assigns the positioning of the letter into the object as an array
+      positionArray.push(i);
+
+      results[sentence[i]] = positionArray;
+
+      positionArray = [];
+    }
+    // }
+  }
   return results;
 };
+const sentence1 = "hi there";
+assertArraysEqual(letterPositions(sentence1).h, [0, 4]);
+assertArraysEqual(letterPositions(sentence1).i, [1]);
+assertArraysEqual(letterPositions(sentence1).t, [3]);
+assertArraysEqual(letterPositions(sentence1).e, [5, 7]);
+assertArraysEqual(letterPositions(sentence1).r, [6]);
+
+// assertArraysEqual(letterPositions(sentence1).);
