@@ -30,5 +30,13 @@ const countLetters = function (string) {
 };
 
 // TEST CODE
+const sentence1 = "LHL is cool";
+const result = countLetters(sentence1);
 
-console.log(countLetters("lighthouse in the house"));
+assertEqual(result["L"], 2); // should PASS
+assertEqual(result["H"], 1); // should PASS
+assertEqual(result["i"], 1); // should PASS
+assertEqual(result["s"], 1); // should PASS
+assertEqual(result["c"], 1); // should PASS
+assertEqual(result["o"], 2); // should PASS
+assertEqual(result["l"], 1); // should PASS
