@@ -11,13 +11,21 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countLetters = function (string) {
-  /* Function takes a sentence and will return a count of each letter  */
+const countLetters = function (sentence) {
+  /* Function takes a sentence and will return a count of each letter.
+  As of now function treats numbers and special characters in strings as letters.
+  If sent any other data type the function will throw an error message 
+   */
 
   const letterCount = {};
 
-  for (const letter of string) {
+  if (typeof sentence !== "string") {
+    throw new Error("Parameter is not a string");
+  }
+
+  for (const letter of sentence) {
     if (letter === " ") {
+      continue;
       // if there is a space in the string function won't count it
     } else if (letterCount[letter]) {
       letterCount[letter]++; // if there is an instance of the letter in result, increment its value by 1
@@ -31,12 +39,37 @@ const countLetters = function (string) {
 
 // TEST CODE
 const sentence1 = "LHL is cool";
-const result = countLetters(sentence1);
+const result1 = countLetters(sentence1);
 
-assertEqual(result["L"], 2); // should PASS
-assertEqual(result["H"], 1); // should PASS
-assertEqual(result["i"], 1); // should PASS
-assertEqual(result["s"], 1); // should PASS
-assertEqual(result["c"], 1); // should PASS
-assertEqual(result["o"], 2); // should PASS
-assertEqual(result["l"], 1); // should PASS
+assertEqual(result1["L"], 2); // should PASS
+assertEqual(result1["H"], 1); // should PASS
+assertEqual(result1["i"], 1); // should PASS
+assertEqual(result1["s"], 1); // should PASS
+assertEqual(result1["c"], 1); // should PASS
+assertEqual(result1["o"], 2); // should PASS
+assertEqual(result1["l"], 1); // should PASS
+
+console.log("----------");
+
+const sentence2 = "     ";
+const result2 = countLetters(sentence2);
+
+assertEqual(result2[" "], undefined); // should PASS
+console.log("----------");
+
+const sentence3 = "We R Number 1";
+const result3 = countLetters(sentence3);
+
+assertEqual(result3["W"], 1); // should PASS
+assertEqual(result3["e"], 2); // should PASS
+assertEqual(result3["R"], 1); // should PASS
+assertEqual(result3["N"], 1); // should PASS
+assertEqual(result3["u"], 1); // should PASS
+assertEqual(result3["m"], 1); // should PASS
+assertEqual(result3["b"], 1); // should PASS
+assertEqual(result3["r"], 1); // should PASS
+assertEqual(result3["1"], 1); // should PASS
+console.log("----------");
+
+const sentence4 = 1;
+const result4 = countLetters(sentence4);
