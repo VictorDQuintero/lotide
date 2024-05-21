@@ -20,14 +20,14 @@ const findKeyByValue = function (object, inputValue) {
 };
 
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire",
 };
 
 const bandsByGenre = {
   metal: "Metallica",
-  classic_rock: "The Rolling Stones",
+  classicRock: "The Rolling Stones",
   indie: "Metric",
   punk: "The Clash",
 };
