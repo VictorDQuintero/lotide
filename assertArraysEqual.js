@@ -5,8 +5,6 @@ const eqArrays = function (arr1, arr2) {
   // Function must compare various things: length of the arrays, then the element inside the arrays
   //If those things are strictly equal, then it returns True, if not function returns false
 
-  // Do this by iterating the arrays, and compare the elements simultaneously
-
   if (arr1.length !== arr2.length) {
     return false;
   }
