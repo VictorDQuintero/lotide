@@ -50,15 +50,15 @@ const eqObjects = function (object1, object2) {
         if (eqArrays(object1[key], object2[key])) {
           isMatch = true;
         } else {
-          return (isMatch = false);
+          return false;
         }
       } else if (object1[key] === object2[key]) {
         isMatch = true;
       } else {
-        return (isMatch = false);
+        return false;
       }
     }
-  } else return (isMatch = false);
+  } else return false;
 
   return isMatch;
 };
