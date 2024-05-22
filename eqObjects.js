@@ -36,9 +36,6 @@ const eqArrays = function (arr1, arr2) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function (object1, object2) {
-  let isMatch;
-  //must stablish whether the objects have the same number of keys
-
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
 
@@ -48,19 +45,19 @@ const eqObjects = function (object1, object2) {
         //tests whether values are arrays, if so utilizes eqArrays to compare
         //if test fails function assumes that they are primitive data types and continues the loop
         if (eqArrays(object1[key], object2[key])) {
-          isMatch = true;
+          continue;
         } else {
           return false;
         }
       } else if (object1[key] === object2[key]) {
-        isMatch = true;
+        continue;
       } else {
         return false;
       }
     }
   } else return false;
 
-  return isMatch;
+  return true;
 };
 
 // TEST CODE
