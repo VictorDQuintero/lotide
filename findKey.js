@@ -48,6 +48,5 @@ const testObject = {
   Sven: { age: 37, countryOfOrigin: "Sweden" },
 };
 const result3 = findKey(testObject, (x) => x.age <= 30);
-const undef = undefined;
 
-assertEqual(result3, undef);
+assertEqual(result3, undefined);
