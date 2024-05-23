@@ -11,3 +11,8 @@ const assertEqual = function (actual, expected) {
     console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+const findKey = function (ovject, callback) {
+  /* Function scans object and return the first key for which the callback returns a truthy value.
+  If no key is found, then it should return undefined. */
+};
