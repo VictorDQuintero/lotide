@@ -61,4 +61,4 @@ assertArraysEqual(results2, [30, 9, 12, 18, 27]); //PASS
 const cities = ["London", "New York City", "Beijing", "Buenos Aires"];
 
 const results3 = map(cities, (city) => city.length);
-assertArraysEqual(results3, [1, 3, 4]); // FAIL
+assertArraysEqual(results3, [6, 13, 7, 12]); // PASS
