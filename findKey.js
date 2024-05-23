@@ -15,38 +15,18 @@ const assertEqual = function (actual, expected) {
 const findKey = function (object, callback) {
   /* Function scans object and return the first key for which the callback returns a truthy value.
   If no key is found, then it should return undefined. */
-  const inspect = require("util").inspect;
 
   for (const [key, value] of Object.entries(object)) {
-    if (typeof value === "object") {
-      // Determines if the value is an object
-      for (const keyOfValue of Object.keys(value)) {
-        if (callback(value)) {
-          return key;
-        }
-      }
-    } else {
-      if (callback(key)) {
-        return key;
-      }
-
-      // if (typeof value === "object" ){
-      //   for (const valueObject of Object.values(value)){
-      //     if(value[valueObject] === callback(value))
-      //   }
-      // }
-      // for (const value)
-      // console.log(`${key} has ${inspect(value)} stars`);
-      // if (value === callback(key)) {
-      //   return key;
-      // }
+    if (callback(value)) {
+      return key;
     }
   }
 };
 
 const letters = { A: 2, B: 3, C: 5, D: 6 };
-const result1 = findKey(letters, (key) => letters[key] >= 5);
-console.log(result1); // should show D
+const result1 = findKey(letters, (x) => x >= 5);
+
+assertEqual(result1, "C");
 
 const result2 = findKey(
   {
@@ -60,4 +40,14 @@ const result2 = findKey(
   (x) => x.stars === 2
 ); // => "noma"
 
-console.log(result2);
+assertEqual(result2, "noma"); //PASS
+
+const testObject = {
+  Jim: { age: 46, countryOfOrigin: "USA" },
+  Beth: { age: 40, countryOfOrigin: "UK" },
+  Sven: { age: 37, countryOfOrigin: "Sweden" },
+};
+const result3 = findKey(testObject, (x) => x.age <= 30);
+const undef = undefined;
+
+assertEqual(result3, undef);
