@@ -35,6 +35,18 @@ const assertArraysEqual = function (actual, expected) {
 const takeUntil = function (array, callback) {
   /* The function will return a "slice of the array with elements taken from the beggining", \
 until the callback returns a truthy value. The callback will only be provided the item in the array */
+
+  const result = [];
+
+  for (let element of array) {
+    if (!callback(element)) {
+      result.push(element);
+    } else {
+      return result;
+    }
+  }
+
+  return result;
 };
 
 // TEST CODE
