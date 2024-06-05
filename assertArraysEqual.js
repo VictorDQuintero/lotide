@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-
+// Import eqArrays function for comparing arrays
 const eqArrays = require("./eqArrays");
 
 const assertArraysEqual = function (actual, expected) {
