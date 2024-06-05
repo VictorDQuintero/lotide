@@ -60,6 +60,8 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
+/* 
 // TEST CODE
 // const empty = {};
 // console.log(eqObjects(empty, empty));
@@ -93,3 +95,4 @@ assertEqual(
   eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject),
   false
 ); // => false
+ */
