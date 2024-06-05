@@ -23,6 +23,8 @@ const findKey = function (object, callback) {
   }
 };
 
+module.exports = findKey;
+/* 
 const letters = { A: 2, B: 3, C: 5, D: 6 };
 const result1 = findKey(letters, (x) => x >= 5);
 
@@ -50,3 +52,4 @@ const testObject = {
 const result3 = findKey(testObject, (x) => x.age <= 30);
 
 assertEqual(result3, undefined);
+ */

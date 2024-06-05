@@ -49,8 +49,10 @@ until the callback returns a truthy value. The callback will only be provided th
   return result;
 };
 
-// TEST CODE
+module.exports = takeUntil;
 
+// TEST CODE
+/* 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, (x) => x < 0);
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
@@ -69,4 +71,4 @@ const data2 = [
   "Redwood",
 ];
 const results2 = takeUntil(data2, (x) => x === ",");
-assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
+assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]); */

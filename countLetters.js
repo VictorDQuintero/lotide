@@ -37,7 +37,9 @@ const countLetters = function (sentence) {
   return letterCount;
 };
 
-// TEST CODE
+module.exports = countLetters;
+
+/* // TEST CODE
 const sentence1 = "LHL is cool";
 const result1 = countLetters(sentence1);
 
@@ -73,3 +75,4 @@ console.log("----------");
 
 const sentence4 = 1;
 const result4 = countLetters(sentence4);
+ */

@@ -44,9 +44,11 @@ The callback function will be implemented inside map function.  */
   return results;
 };
 
+module.exports = map;
+
 // TEST CODE
 
-const words = ["ground", "control", "to", "major", "tom"];
+/* const words = ["ground", "control", "to", "major", "tom"];
 
 const results1 = map(words, (word) => word[0]);
 assertArraysEqual(words, results1); // FAIL
@@ -62,3 +64,4 @@ const cities = ["London", "New York City", "Beijing", "Buenos Aires"];
 
 const results3 = map(cities, (city) => city.length);
 assertArraysEqual(results3, [6, 13, 7, 12]); // PASS
+ */
