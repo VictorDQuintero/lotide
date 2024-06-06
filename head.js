@@ -1,8 +1,5 @@
-// FUNCTION IMPLEMENTATION
-
+// Function takes an array and extracts the first element, then returns it
 const head = function (arr) {
-  /* Will take an array and extract the first element, then return it */
-
   return arr[0];
 };
 

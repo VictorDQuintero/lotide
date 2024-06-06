@@ -1,8 +1,5 @@
-//  FUNCTION IMPLEMENTATION
-
+//  Function takes in two arrays and returns true or false, based on a perfect match.
 const eqArrays = function (arr1, arr2) {
-  /* Function takes in two arrays and returns true or false, based on a perfect match */
-
   if (arr1.length !== arr2.length) {
     return false;
   }

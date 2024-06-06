@@ -31,10 +31,9 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
+// Function takes in a nested array, one level deep, and 'flattens' it by turning it into an unnested array.
+// This function will only handle one level of nesting.
 const flatten = function (arr) {
-  /* Function takes in a nested array, one level deep, and 'flattens' it by turning it into an unnested array. */
-  /* This function will only handle one level of nesting. */
-
   let newArr = [];
 
   if (!Array.isArray(arr)) {

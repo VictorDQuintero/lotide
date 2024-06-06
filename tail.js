@@ -1,8 +1,5 @@
-//  FUNCTION IMPLEMENTATION
-
+// Function takes an array and returns a shallow copy of it
 const tail = function (arr) {
-  // Function uses slice method to return shallow copy of array
-
   return arr.slice(1);
 };
 

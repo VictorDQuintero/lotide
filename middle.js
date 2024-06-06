@@ -1,8 +1,5 @@
-// FUNCTION IMPLEMENTATION
-
+//  Function takes array and returns an array with the middle element or elements of the input array
 const middle = function (arr) {
-  /* Function will take array and return an array with the middle element or elements of the input array  */
-
   //Test array if it's array
   let newArr = [];
 

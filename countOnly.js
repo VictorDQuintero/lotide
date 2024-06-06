@@ -11,10 +11,11 @@ const assertEqual = function (actual, expected) {
   }
 };
 
+/* Function takes an array of items and returns a count for a specific subset of those items. */
+
 const countOnly = function (allItems, itemsToCount) {
-  /* Function takes an array of items and returns a count for a specific subset of those items */
   // allItems: an array of strings that we need to look through
-  // itemsToCount: an object specying what to count
+  // itemsToCount: an object specifying what to count
   const results = {};
 
   for (const item of allItems) {

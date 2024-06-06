@@ -43,9 +43,8 @@ const eqObjects = function (object1, object2) {
 
   return true;
 };
-
+// Function takes two objects, compares them and prints whether they are equal or not.
 const assertObjectsEqual = function (actual, expected) {
-  // Will take to objects and console.log a PASS/FAIL message to the console
   const inspect = require("util").inspect; // Used to make assertions print out the actual objects and not [object Object]
 
   if (eqObjects(actual, expected)) {

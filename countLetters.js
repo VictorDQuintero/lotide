@@ -1,4 +1,3 @@
-//  FUNCTION IMPLEMENTATION
 const assertEqual = function (actual, expected) {
   // Will take the two parameters and compare them with the strict equality operator
   //If they are strictly equal it will print Equal or Not Equal, as a test
@@ -10,13 +9,10 @@ const assertEqual = function (actual, expected) {
     console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-
+/* 
+Function takes a sentence and will return a count of each letter. As of now function treats numbers and special characters in strings as letters. If sent any other data type the function will throw an error message.
+*/
 const countLetters = function (sentence) {
-  /* Function takes a sentence and will return a count of each letter.
-  As of now function treats numbers and special characters in strings as letters.
-  If sent any other data type the function will throw an error message 
-   */
-
   const letterCount = {};
 
   if (typeof sentence !== "string") {

@@ -31,16 +31,14 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
-const without = function (source, itemsToRemove) {
-  /* Function takes a source array and a second array with the items to remove from the source array.
-  It should return a third array similar to the source array but without the elements from itemsToRemove.
-  The source array shouldn't be changed */
+// Function takes a source array and a second array with the items to remove from the source array. It returns a third array similar to the source array but without the elements from itemsToRemove.
 
+const without = function (sourceArr, itemsToRemove) {
   let newArr = [];
 
   let isMatchFound = false; //Boolean variable that 'flags' a match
 
-  for (let sourceElement of source) {
+  for (let sourceElement of sourceArr) {
     // Iterates source array
 
     for (let removeElement of itemsToRemove) {
