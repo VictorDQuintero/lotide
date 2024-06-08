@@ -74,4 +74,15 @@ describe("#countOnly", () => {
       undefined
     );
   });
+  it("returns 'Empty Array'", () => {
+    assert.strictEqual(
+      countOnly([], {
+        Jason: true,
+        Karima: true,
+        Fang: true,
+        Aghouanna: false,
+      }),
+      "Empty Array"
+    );
+  });
 });
