@@ -4,7 +4,7 @@ const middle = function (arr) {
   let newArr = [];
 
   if (!Array.isArray(arr)) {
-    throw new Error("Input is not an array");
+    return "Input is not an array";
   }
 
   //Test if array has less than two elements, if so return empty new array
