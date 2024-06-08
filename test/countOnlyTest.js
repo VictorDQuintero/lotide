@@ -85,4 +85,7 @@ describe("#countOnly", () => {
       "Empty Array"
     );
   });
+  it("returns 'Empty Object'", () => {
+    assert.strictEqual(countOnly([1, 2, 3], {}), "Empty Object");
+  });
 });
