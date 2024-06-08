@@ -5,6 +5,10 @@ const countOnly = function (allItems, itemsToCount) {
   // itemsToCount: an object specifying what to count
   const results = {};
 
+  if (allItems.length === 0) {
+    return "Empty Array";
+  }
+
   for (const item of allItems) {
     if (itemsToCount[item]) {
       // Checks if the an item in allItems is also contained in itemsToCount and has a boolean value of true
