@@ -7,6 +7,8 @@ const countOnly = function (allItems, itemsToCount) {
 
   if (allItems.length === 0) {
     return "Empty Array";
+  } else if (Object.keys(itemsToCount).length === 0) {
+    return "Empty Object";
   }
 
   for (const item of allItems) {
