@@ -4,6 +4,9 @@ const findKey = function (object, callback) {
   if (typeof object !== "object") {
     return "No Object Provided";
   }
+  if (typeof callback !== "function") {
+    return "No Function Provided";
+  }
   for (const [key, value] of Object.entries(object)) {
     if (callback(value)) {
       return key;
