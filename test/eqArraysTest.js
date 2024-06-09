@@ -11,4 +11,7 @@ describe("#eqArrays", () => {
   it("returns true for [] === []", () => {
     assert.strictEqual(eqArrays([], []), true);
   });
+  it("returns false for 'Not an array' === ['Is', 'Array']", () => {
+    assert.strictEqual(eqArrays("Not an array", ["Is", "Array"]), false);
+  });
 });
