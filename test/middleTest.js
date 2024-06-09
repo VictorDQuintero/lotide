@@ -19,10 +19,9 @@ describe("#middle", () => {
   });
 
   it("make sure the original array was not altered by the middle function", () => {
-    const words = ["hello", "world", "lighthouse"];
-    const result = middle(words);
-    assert.deepEqual(result, ["world"]);
-    assert.strictEqual(words.length, 3);
+    const arr = [1, 2, 3];
+    const result = middle(arr);
+    assert.deepEqual(result, [2]);
+    assert.strictEqual(arr.length, 3);
   });
-  //make sure to change this before I submit project
 });
