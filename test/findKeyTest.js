@@ -33,17 +33,17 @@ describe("#findKey", () => {
   it("returns 'No Function Provided'", () => {
     assert.strictEqual(findKey({ A: 2 }), "No Function Provided");
   });
+  it("returns 'undefined", () => {
+    assert.strictEqual(
+      findKey(
+        {
+          Jim: { age: 46, countryOfOrigin: "USA" },
+          Beth: { age: 40, countryOfOrigin: "UK" },
+          Sven: { age: 37, countryOfOrigin: "Sweden" },
+        },
+        (x) => x.age <= 30
+      ),
+      undefined
+    );
+  });
 });
-
-/* 
-
-
-const testObject = {
-  Jim: { age: 46, countryOfOrigin: "USA" },
-  Beth: { age: 40, countryOfOrigin: "UK" },
-  Sven: { age: 37, countryOfOrigin: "Sweden" },
-};
-const result3 = findKey(testObject, (x) => x.age <= 30);
-
-assertEqual(result3, undefined);
- */
