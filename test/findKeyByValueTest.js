@@ -11,27 +11,9 @@ describe("#findKeyByValue", () => {
       "Key Not Found"
     );
   });
-  // it("returns false for {A: '1'} equals {A: 1, B: 2}", () => {
-  //   assert.strictEqual(findKeyByValue({ A: 1 }, { A: 1, B: 2 }), false);
-  // });
-  // it("returns false for {A: '1'} equals {A: 1}", () => {
-  //   assert.strictEqual(findKeyByValue({ A: "1" }, { A: 1 }), false);
-  // });
-  // it("returns true for {} equals {}", () => {
-  //   assert.strictEqual(findKeyByValue({}, {}), true);
-  // });
-  // it("returns true for {1: [1, 2, 3]} equals {1: [1, 2, 3]}", () => {
-  //   assert.strictEqual(
-  //     findKeyByValue({ 1: [1, 2, 3] }, { 1: [1, 2, 3] }),
-  //     true
-  //   );
-  // });
-  // it("returns false for {1: ['1', 2, 3]} equals {1: [1, 2, 3]}", () => {
-  //   assert.strictEqual(
-  //     findKeyByValue({ 1: ["1", 2, 3] }, { 1: [1, 2, 3] }),
-  //     false
-  //   );
-  // });
+  it("returns 'No Object Provided' for (1, 4)", () => {
+    assert.strictEqual(findKeyByValue(1, 4), "No Object Provided");
+  });
 });
 
 /* 
