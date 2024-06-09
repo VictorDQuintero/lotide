@@ -5,9 +5,13 @@ const countOnly = function (allItems, itemsToCount) {
   // itemsToCount: an object specifying what to count
   const results = {};
 
+  if (!Array.isArray(allItems)) {
+    return "Array Not Given";
+  }
   if (allItems.length === 0) {
     return "Empty Array";
-  } else if (Object.keys(itemsToCount).length === 0) {
+  }
+  if (Object.keys(itemsToCount).length === 0) {
     return "Empty Object";
   }
 
