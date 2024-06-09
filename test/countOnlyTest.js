@@ -88,4 +88,7 @@ describe("#countOnly", () => {
   it("returns 'Empty Object'", () => {
     assert.strictEqual(countOnly([1, 2, 3], {}), "Empty Object");
   });
+  it("returns 'Array Not Given'", () => {
+    assert.strictEqual(countOnly(1, { A: "a" }), "Array Not Given");
+  });
 });
