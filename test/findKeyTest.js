@@ -30,6 +30,9 @@ describe("#findKey", () => {
       "No Object Provided"
     );
   });
+  it("returns 'No Function Provided'", () => {
+    assert.strictEqual(findKey({ A: 2 }), "No Function Provided");
+  });
 });
 
 /* 
