@@ -1,6 +1,6 @@
 /* The map function will take in two arguments an array to map and a callback function.
 The callback function will be implemented inside map function.  */
-const map = function (array, callback) {
+const map = function(array, callback) {
   const results = [];
 
   for (let item of array) {
