@@ -5,8 +5,11 @@ describe("#findKeyByValue", () => {
   it("returns A for({A: 1, B: 2, C: 3}, 1)", () => {
     assert.strictEqual(findKeyByValue({ A: 1, B: 2, C: 3 }, 1), "A");
   });
-  it("returns 'Not Found' for ({A: 1, B: 2, C: 3}, 4)", () => {
-    assert.strictEqual(findKeyByValue({ A: 1, B: 2, C: 3 }, 4), "Not Found");
+  it("returns 'Key Not Found' for ({A: 1, B: 2, C: 3}, 4)", () => {
+    assert.strictEqual(
+      findKeyByValue({ A: 1, B: 2, C: 3 }, 4),
+      "Key Not Found"
+    );
   });
   // it("returns false for {A: '1'} equals {A: 1, B: 2}", () => {
   //   assert.strictEqual(findKeyByValue({ A: 1 }, { A: 1, B: 2 }), false);
