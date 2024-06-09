@@ -24,9 +24,12 @@ describe("#findKey", () => {
       "noma"
     );
   });
-  // it("returns 'undefined' for (1, 4)", () => {
-  //   assert.strictEqual(findKey(1, 4), "No Object Provided");
-  // });
+  it("returns 'No Object Provided'", () => {
+    assert.strictEqual(
+      findKey(1, (x) => x >= 5),
+      "No Object Provided"
+    );
+  });
 });
 
 /* 
