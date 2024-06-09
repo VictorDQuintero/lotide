@@ -1,6 +1,6 @@
 // Function takes a source array and a second array with the items to remove from the source array. It returns a third array similar to the source array but without the elements from itemsToRemove.
 
-const without = function (sourceArr, itemsToRemove) {
+const without = function(sourceArr, itemsToRemove) {
   let newArr = [];
 
   let isMatchFound = false; //Boolean variable that 'flags' a match

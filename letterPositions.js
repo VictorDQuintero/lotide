@@ -1,5 +1,5 @@
 // Function takes a string/sentence and returns an object with properties of each letter as keys and an array containing the original indeces for that letter.
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const results = {};
 
   if (typeof sentence !== "string") {

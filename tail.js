@@ -1,5 +1,5 @@
 // Function takes an array and returns a shallow copy of it
-const tail = function (arr) {
+const tail = function(arr) {
   return arr.slice(1);
 };
 

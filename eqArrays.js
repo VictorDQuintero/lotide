@@ -1,5 +1,5 @@
 //  Function takes in two arrays and returns true or false, based on a perfect match.
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   //if either input is not an array returns false
   if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return false;

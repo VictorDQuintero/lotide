@@ -1,5 +1,5 @@
 //  Function takes array and returns an array with the middle element or elements of the input array
-const middle = function (arr) {
+const middle = function(arr) {
   //Test array if it's array
   let newArr = [];
 

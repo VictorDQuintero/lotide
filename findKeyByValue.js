@@ -1,5 +1,5 @@
 // Function takes object and a variable, then it returns the first property key that matches with the value given.
-const findKeyByValue = function (object, inputValue) {
+const findKeyByValue = function(object, inputValue) {
   if (typeof object !== "object") {
     return "No Object Provided";
   }

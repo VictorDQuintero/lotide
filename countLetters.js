@@ -1,6 +1,6 @@
 //Function takes a sentence and will return a count of each letter. As of now function treats numbers and special characters in strings as letters. If sent any other data type the function will throw an error message.
 
-const countLetters = function (sentence) {
+const countLetters = function(sentence) {
   const letterCount = {};
 
   if (typeof sentence !== "string") {

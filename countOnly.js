@@ -1,6 +1,6 @@
 /* Function takes an array of items and returns a count for a specific subset of those items. */
 
-const countOnly = function (allItems, itemsToCount) {
+const countOnly = function(allItems, itemsToCount) {
   // allItems: an array of strings that we need to look through
   // itemsToCount: an object specifying what to count
   const results = {};
